@@ -75,9 +75,9 @@ class ConfigService {
       cli: {
         migrationsDir: 'src/migration'
       },
-      logging: this.getEnv('LOGGING', false)
+      logging: this.getEnv('LOGGING', false),
       // synchronize: true
-
+      ssl: true
       //   ssl: this.isProduction(),
     };
   }
@@ -127,6 +127,21 @@ class ConfigService {
       ),
       clientX509CertUrl: this.getEnv('FIREBASE_CLIENT_X509_CERT_URL'),
       databaseURL: this.getEnv('NEXT_PUBLIC_FIREBASE_DATABASE_URL')
+    };
+  }
+
+  public getFirebaseConfigStorage() {
+    return {
+      apiKey: this.getEnv('NEXT_PUBLIC_FIREBASE_API_KEY'),
+      authDomain: this.getEnv('NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN'),
+      databaseURL: this.getEnv('NEXT_PUBLIC_FIREBASE_DATABASE_URL'),
+      projectId: this.getEnv('NEXT_PUBLIC_FIREBASE_PROJECT_ID'),
+      storageBucket: this.getEnv('NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET'),
+      messagingSenderId: this.getEnv(
+        'NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID'
+      ),
+      appId: this.getEnv('NEXT_PUBLIC_FIREBASE_APP_ID'),
+      measurementId: this.getEnv('NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID')
     };
   }
 }
