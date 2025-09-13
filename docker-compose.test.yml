@@ -65,7 +65,7 @@ services:
         condition: any
     networks:
       - expense-tracker_net
-  rabbitmq:
+  rabbitmq-server:
     image: rabbitmq:3-management-alpine
     container_name: 'asdi-mvp-rabbitmq'
     environment:
