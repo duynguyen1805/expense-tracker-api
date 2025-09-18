@@ -22,7 +22,7 @@ import { MulterModule } from '@nestjs/platform-express';
 import { CustomeCacheModule } from './modules/cache/cache.module';
 import { ConfigModule } from '@nestjs/config';
 import { UploadModule } from './modules/upload/upload.module';
-import { AffiliateModule } from './modules/affiliate/affiliate.module';
+// import { AffiliateModule } from './modules/affiliate/affiliate.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import settings from '../ormconfig.json';
 import { RmqModule } from './modules/rmq/rmq.module';
@@ -67,7 +67,7 @@ const configRedis = configService.getRedisConfig();
       ttl: 0
     }),
     UserModule,
-    AffiliateModule,
+    // AffiliateModule,
     AuthModule,
     RoleModule,
     UploadModule,
