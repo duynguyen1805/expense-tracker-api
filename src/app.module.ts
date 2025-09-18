@@ -26,7 +26,7 @@ import { AffiliateModule } from './modules/affiliate/affiliate.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import settings from '../ormconfig.json';
 import { RmqModule } from './modules/rmq/rmq.module';
-import { TransactionsModule } from './modules/transactions/transactions.module';
+// import { TransactionsModule } from './modules/transactions/transactions.module';
 import { EServiceType } from './common/enums/service-type.enum';
 import { compact } from 'lodash';
 import { BlacklistMiddleware } from './common/middleware/blacklist-token.middleware';
@@ -73,7 +73,7 @@ const configRedis = configService.getRedisConfig();
     UploadModule,
     CustomeCacheModule,
     RmqModule,
-    TransactionsModule,
+    // TransactionsModule,
     IncomeModule,
     BudgetsModule,
     UploadMinIOModule,
