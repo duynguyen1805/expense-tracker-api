@@ -6,7 +6,7 @@ import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 import { TransformInterceptor } from './common/interceptors/transform.interceptor';
 import { AllExceptionsFilter } from './common/exceptions/all-exception.filter';
 import { MicroserviceOptions } from '@nestjs/microservices';
-import { RmqService } from './modules/rmq/rmq.service';
+// import { RmqService } from './modules/rmq/rmq.service';
 import { rmqConsumerSetting } from './rmq.consumer';
 import { ConfigService } from '@nestjs/config';
 
@@ -34,16 +34,16 @@ async function bootstrap() {
   // Init rabbitMQ microservice
   const queueConfigs = rmqConsumerSetting(appConfigs);
 
-  if (queueConfigs?.length) {
-    const rmqService = app.get<RmqService>(RmqService);
-    await Promise.all(
-      queueConfigs.map((config) => {
-        app.connectMicroservice<MicroserviceOptions>(
-          rmqService.getOptions(config.queueName, false, config.prefetchCount)
-        );
-      })
-    );
-  }
+  // if (queueConfigs?.length) {
+  //   const rmqService = app.get<RmqService>(RmqService);
+  //   await Promise.all(
+  //     queueConfigs.map((config) => {
+  //       app.connectMicroservice<MicroserviceOptions>(
+  //         rmqService.getOptions(config.queueName, false, config.prefetchCount)
+  //       );
+  //     })
+  //   );
+  // }
 
   const config = new DocumentBuilder()
     .setTitle('PERSONAL FINANCE API')
