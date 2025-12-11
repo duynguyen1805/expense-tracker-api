@@ -25,7 +25,7 @@ import { UploadModule } from './modules/upload/upload.module';
 // import { AffiliateModule } from './modules/affiliate/affiliate.module';
 import { ScheduleModule } from '@nestjs/schedule';
 import settings from '../ormconfig.json';
-import { RmqModule } from './modules/rmq/rmq.module';
+// import { RmqModule } from './modules/rmq/rmq.module';
 // import { TransactionsModule } from './modules/transactions/transactions.module';
 import { EServiceType } from './common/enums/service-type.enum';
 import { compact } from 'lodash';
@@ -72,7 +72,7 @@ const configRedis = configService.getRedisConfig();
     RoleModule,
     UploadModule,
     CustomeCacheModule,
-    RmqModule,
+    // RmqModule,
     // TransactionsModule,
     IncomeModule,
     BudgetsModule,
