@@ -17,7 +17,7 @@ export const KEEP_ALIVE_CONFIG = {
   // Timeout settings (in milliseconds)
   TIMEOUTS: {
     SELF_PING: 10000, // 10 seconds
-    EXTERNAL_PING: 10000, // 15 seconds
+    EXTERNAL_PING: 20000, // 15 seconds
     DB_CHECK: 5000 // 5 seconds
   },
 
