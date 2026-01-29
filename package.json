@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist && npm run pretypeorm",
     "build": "nest build",
-    "postbuild": "node scripts/copy-templates.js",
+    "postbuild": "node src/scripts/copy-templates.ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "prestart": "npm run pretypeorm && npm run typeorm:migration:run",
     "start": "nest start",
